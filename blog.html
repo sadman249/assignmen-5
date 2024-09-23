@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <!-- DaisUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        .font-lexend{
+            font-family: "Lexend", sans-serif;
+        }
+    </style>
+
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            'bt-primary': 'rgb(180, 244, 97)',
+          },
+        },
+      },
+    }
+</script>
+
+
+</head>
+<body class="font-lexend">
+    <header class="bg-slate-200 p-4 fixed w-full top-0 z-10">
+        <nav class="lg:ml-20 lg:mr-20">
+            <div class="navbar mt-5">
+                <div class="navbar-start">
+                    <a class="btn lg:w-32 bg-bt-primary" href="index.html">Home</a>
+                </div>
+                <div class="navbar-center">
+                    <img class="size-10" src="assets/logo.png" alt="" srcset="">
+                  <a class="ml-4 font-bold text-xl hidden lg:block">Donate Bangladesh</a>
+                </div>
+                <div class="navbar-end">
+                  <button class="btn btn-ghost btn-circle">
+                    <img src="assets/coin.png" alt="" srcset="">
+                  </button>
+                  <p>5500</p> <p class="ml-2">BDT</p>
+                </div>
+              </div>
+        </nav>
+
+        <div class="text-center mt-10">
+            <button class="btn bg-bt-primary">Donation</button>
+            <button class="btn">History</button>
+        </div>
+    </header>
+    <main class="mt-56 lg:ml-20 lg:mr-20">
+        <!-- Creativety FAQ Section -->
+
+    <section class="my-24 bg-slate-50">
+        <h3 class="text-5xl font-bold mb-12 pt-10 lg:pl-10 pl-5">
+          Important <span class="text-bike-primary">FAQ</span>
+        </h3>
+        <div class="lg:p-10">
+            <div class="space-y-5">
+              <div class="collapse collapse-arrow border border-blue-100">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+                <div class="collapse-title text-xl font-medium">
+                  What is the Document Object Model (DOM)?
+                </div>
+                <div class="collapse-content">
+                  <p>
+                    The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of a webpage as a tree of objects, where each element, attribute, and piece of text is a node. This allows scripts and programs to dynamically access and manipulate the content, structure, and style of a webpage.
+                  </p>
+                </div>
+            </div>
+            <div class="collapse collapse-arrow border border-blue-100">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">
+                  How to you select on element from the DOM?
+                </div>
+                <div class="collapse-content">
+                    <p>
+                        <ul>
+                            Select DOM Elements Using JavaScript
+                        </ul>
+                        <ul>1.Introduction.</ul>
+                        <ul>2.Understanding the DOM as an Object Hierarchy.</ul>
+                        <ul>3.Use an ID to Select an Element with .getElementById()</ul>
+                        <ul>4.Use a CSS Selector to Select an Element with .querySelector()</ul>
+                        <ul>5.Use a CSS Selector to Select Multiple Elements with .querySelectorAll()</ul>
+                        <ul>6.Other Ways to Select Elements.</ul>
+                    </p>
+                </div>
+            </div>
+              <div class="collapse collapse-arrow border border-blue-100">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">
+                  What is event delegation in the context of the DOM and is it useful?
+                </div>
+                <div class="collapse-content">
+                  <p>
+                    Event Delegation is a pattern based upon the concept of Event Bubbling. It is an event-handling pattern that allows you to handle events at a higher level in the DOM tree other than the level where the event was first received.
+                  </p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow border border-blue-100">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">
+                  How do you manlpulate an element's attributes and styles using the DOM?
+                </div>
+                <div class="collapse-content">
+                  <p>
+                    If you want to change other attributes like id , href , or src , you can use the setAttribute() method. The setAttribute() method accepts two arguments: The name of the attribute to set. The value of the attribute to set. 
+                  </p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow border border-blue-100">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">
+                    How do you remove elements from the DOM?
+                </div>
+                <div class="collapse-content">
+                  <p>
+                    To remove an element from the DOM, we will use the remove() method of the element. const myDiv = document. getElementById("myDiv"); myDiv.
+                  </p>
+                </div>
+              </div>
+            </div>
+        </div>
+      </section>
+  
+    </main>
+</body>
+</html>
