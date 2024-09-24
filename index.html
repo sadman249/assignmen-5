@@ -54,13 +54,13 @@
         </nav>
 
         <div class="text-center mt-10">
-            <button class="btn bg-bt-primary">Donation</button>
-            <button class="btn">History</button>
+            <button id="show-donate-money-form" class="btn bg-bt-primary">Donation</button>
+            <button id="show-transaction-history" class="btn">History</button>
         </div>
     </header>
     <main class="mt-56 mb-10 lg:ml-20 lg:mr-20">
         <!-- Flood Area Section-1 -->
-        <div class="card lg:card-side bg-base-150 shadow lg:pl-10 p-3 bg-[rgb(255, 255, 255)] border-2">
+        <div id="donate-money-form" class="card lg:card-side bg-base-150 shadow lg:pl-10 p-3 bg-[rgb(255, 255, 255)] border-2">
             <figure>
                 <img src="assets/noakhali.png" alt="Album" />
             </figure>
@@ -80,23 +80,8 @@
             </div>
         </div>
         
-        <!-- Popup Modal -->
-        <div id="donation-popup" class="hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center">
-            <div class="bg-white p-5 rounded">
-                <h2 class="text-lg text-center font-bold">Congrats!</h2>
-                <div class="flex justify-center">
-                    <img class="" src="assets/coin.png" alt="" srcset="">
-                </div>
-                <p class="text-center">You have Donated for Humankind</p>
-                <h3 class="text-lg text-center" id="popup-message"></h3>
-                <div class="text-center">
-                    <button id="close-popup" class="btn mt-4 bg-gray-200 rounded-md hover:bg-gray-300">Close confirmation</button>
-                </div>
-            </div>
-        </div>
-      
         <!-- Flood Area Section-2 -->
-        <div class="card lg:card-side bg-base-150 shadow lg:pl-10 p-3 bg-[rgb(255, 255, 255)] border-2 mt-5">
+        <div id="donate-money-form" class="card lg:card-side bg-base-150 shadow lg:pl-10 p-3 bg-[rgb(255, 255, 255)] border-2 mt-5">
           <figure>
               <img src="assets/feni.png" alt="Album" />
           </figure>
@@ -114,23 +99,10 @@
           </div>
       </div>
 
-      <!-- Popup Modal -->
-      <div id="donation-popup" class="hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center">
-        <div class="bg-white p-5 rounded">
-            <h2 class="text-lg text-center font-bold">Congrats!</h2>
-            <div class="flex justify-center">
-                <img class="" src="assets/coin.png" alt="" srcset="">
-            </div>
-            <p class="text-center">You have Donated for Humankind</p>
-            <h3 class="text-lg text-center" id="popup-message"></h3>
-            <div class="text-center">
-                <button id="close-popup" class="btn mt-4 bg-gray-200 rounded-md hover:bg-gray-300">Close confirmation</button>
-            </div>
-        </div>
-    </div>
+      
       
         <!-- Flood Area Section-3 -->
-        <div class="card lg:card-side bg-base-150 shadow lg:pl-10 p-3 bg-[rgb(255, 255, 255)] border-2 mt-5">
+        <div id="donate-money-form" class="card lg:card-side bg-base-150 shadow lg:pl-10 p-3 bg-[rgb(255, 255, 255)] border-2 mt-5">
           <figure>
               <img src="assets/quota-protest.png" alt="Album" />
           </figure>
@@ -150,16 +122,30 @@
           </div>
       </div>
       <!-- history start -->
-      <div id="transaction-section" class="hidden">
-        <h2 class="text-3xl text-center">History</h2>
-        <div id="transaction-container" class="space-y-3">
+      <div id="history-section" class="hidden">
+        <h2 class="text-3xl text-center"></h2>
+        <div id="history-container" class="space-y-3">
 
         </div>
      </div>
      <!-- history End -->
 
+      <!-- Popup Modal -->
+      <div id="donation-popup" class="hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center">
+        <div class="bg-white p-5 rounded">
+            <h2 class="text-3xl text-center font-bold">Congrats!</h2>
+            <div class="flex justify-center">
+                <img class="mt-2" src="assets/coin.png" alt="" srcset="">
+            </div>
+            <p class="text-center mt-2">You have Donated for Humankind</p>
+            <h3 class="text-lg text-center font-bold" id="popup-message"></h3>
+            <div class="text-center">
+                <button id="close-popup" class="btn mt-4 bg-gray-200 rounded-md hover:bg-gray-300">Close confirmation</button>
+            </div>
+        </div>
+    </div>
+
     </main>
-    
     <script src="js/noakhali-donate.js"></script>
     <script src="js/feni-donate.js"></script>
     <script src="js/quota-donate.js"></script>

@@ -1,24 +1,34 @@
-document.getElementById('quota-btn-add-money').addEventListener('click', function() {
-    const donationAmount = document.getElementById('quota-input-add-money').value;
-    
-    // Check if the input is a valid number and greater than 0
-    if (donationAmount && !isNaN(donationAmount) && Number(donationAmount) > 0) {
-        // Update account balance (optional)
-        const currentBalance = parseFloat(document.getElementById('quota-account-balance').innerText);
-        document.getElementById('quota-account-balance').innerText = (currentBalance + parseFloat(donationAmount)).toFixed(2);
 
-        // Show success message in popup
-        document.getElementById('popup-message').innerText = `Successfully`;
-    } else {
-        // Show error message in popup
-        document.getElementById('popup-message').innerText = 'Please enter a valid donation amount.';
-    }
+document.addEventListener('DOMContentLoaded', () => {
+    const balanceElement = document.getElementById('balance');
+    const quotaAccountBalanceElement = document.getElementById('quota-account-balance');
+    const quotaInput = document.getElementById('quota-input-add-money');
+    const quotaButton = document.getElementById('quota-btn-add-money');
+    const donationPopup = document.getElementById('donation-popup');
+    const popupMessage = document.getElementById('popup-message');
+    const closePopupButton = document.getElementById('close-popup');
 
-    // Show the popup
-    document.getElementById('donation-popup').classList.remove('hidden');
+    quotaButton.addEventListener('click', () => {
+        const donationAmount = parseFloat(quotaInput.value);
+        if (isNaN(donationAmount) || donationAmount <= 0) {
+            alert('Please enter a valid donation amount.');
+            return;
+        }
+
+        // Update the balances
+        const currentBalance = parseFloat(balanceElement.textContent);
+        const currentQuotaBalance = parseFloat(quotaAccountBalanceElement.textContent);
+
+        balanceElement.textContent = (currentBalance - donationAmount).toFixed(2);
+        quotaAccountBalanceElement.textContent = (currentQuotaBalance + donationAmount).toFixed(2);
+
+        // Show the popup
+        popupMessage.textContent = `Successfully`;
+        donationPopup.classList.remove('hidden');
+    });
+
+    closePopupButton.addEventListener('click', () => {
+        donationPopup.classList.add('hidden');
+    });
 });
 
-// Close popup event
-document.getElementById('close-popup').addEventListener('click', function() {
-    document.getElementById('donation-popup').classList.add('hidden');
-});
