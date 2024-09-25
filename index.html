@@ -38,7 +38,7 @@
         <nav class="lg:ml-20 lg:mr-20">
             <div class="navbar mt-5">
                 <div class="navbar-start">
-                  <a class="btn lg:w-32 bg-bt-primary" href="blog.html">Blog</a>
+                  <a class="btn lg:w-32 bg-bt-primary lg:text-xl text-base" href="blog.html">Blog</a>
                 </div>
                 <div class="navbar-center">
                     <img class="size-10" src="assets/logo.png" alt="" srcset="">
@@ -48,14 +48,14 @@
                   <button class="btn btn-ghost btn-circle">
                     <img src="assets/coin.png" alt="" srcset="">
                   </button>
-                  <p id="balance">5500</p> <p class="ml-2">BDT</p>
+                  <p id="balance" class="text-xl lg:font-medium">5500</p> <p class="ml-2 text-xl lg:font-bold font-medium">BDT</p>
                 </div>
               </div>
         </nav>
 
         <div class="text-center mt-10">
-            <button id="show-donate-money-form" class="btn bg-bt-primary">Donation</button>
-            <button id="show-transaction-history" class="btn">History</button>
+            <button id="show-donate-money-form" class="btn bg-bt-primary lg:text-xl text-base">Donation</button>
+            <button id="show-transaction-history" class="btn lg:text-xl text-base">History</button>
         </div>
     </header>
     <main class="mt-56 mb-10 lg:ml-20 lg:mr-20">
@@ -91,7 +91,7 @@
               <div class="card-actions">
                   <button class="btn">
                       <img src="assets/coin.png" alt="" srcset="">
-                      <p id="feni-account-balance">0</p><p>BDT</p>
+                      <p id="feni-account-balance">600</p><p>BDT</p>
                   </button>
               </div>
               <h2 class="card-title mt-5">Donate for Flood Relief in Feni, Bangladesh</h2>
@@ -110,7 +110,7 @@
               <div class="card-actions">
                   <button class="btn">
                       <img src="assets/coin.png" alt="" srcset="">
-                      <p id="quota-account-balance">0</p><p>BDT</p>
+                      <p id="quota-account-balance">2400</p><p>BDT</p>
                   </button>
               </div>
               <h2 class="card-title mt-5">Aid for Injured in the Quota Movement</h2>
@@ -141,14 +141,15 @@
     <!-- history start -->
     <div id="history-section" class="hidden">
         <h2 class="text-3xl text-center">Donation History</h2>
-        <div id="history-container" class="space-y-3 text-center mt-5 text-xl"></div>
+        <div id="history-container" class="space-y-3 text-center mt-5 text-xl" ></div>
     </div>    
     <!-- history End -->
 
     <script src="js/noakhali-donate.js"></script>
     <script src="js/feni-donate.js"></script>
     <script src="js/quota-donate.js"></script>
-    <script src="js/features.js"></script> 
+    <script src="js/features.js"></script>
+    <script src="js/colour.js"></script> 
     
 </body>
 </html>

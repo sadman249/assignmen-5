@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
         historyContainer.innerHTML = "";
         donationHistory.forEach(donation => {
             const donationElement = document.createElement("div");
-            donationElement.textContent = `Donated BDT ${donation.amount} for ${donation.location} - ${donation.date}`;
+            donationElement.textContent = `Donated BDT ${donation.amount} for ${donation.location} Date : ${donation.date}`;
             historyContainer.appendChild(donationElement);
         });
     }
