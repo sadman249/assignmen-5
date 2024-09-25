@@ -59,7 +59,9 @@
         </div>
     </header>
     <main class="mt-56 mb-10 lg:ml-20 lg:mr-20">
-        <!-- Flood Area Section-1 -->
+    <div>
+
+            <!-- Flood Area Section-1 -->
         <div id="donate-money-form" class="card lg:card-side bg-base-150 shadow lg:pl-10 p-3 bg-[rgb(255, 255, 255)] border-2">
             <figure>
                 <img src="assets/noakhali.png" alt="Album" />
@@ -99,8 +101,6 @@
           </div>
       </div>
 
-      
-      
         <!-- Flood Area Section-3 -->
         <div id="donate-money-form" class="card lg:card-side bg-base-150 shadow lg:pl-10 p-3 bg-[rgb(255, 255, 255)] border-2 mt-5">
           <figure>
@@ -121,14 +121,6 @@
               </button>
           </div>
       </div>
-      <!-- history start -->
-      <div id="history-section" class="hidden">
-        <h2 class="text-3xl text-center"></h2>
-        <div id="history-container" class="space-y-3">
-
-        </div>
-     </div>
-     <!-- history End -->
 
       <!-- Popup Modal -->
       <div id="donation-popup" class="hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center mt-24">
@@ -143,12 +135,20 @@
                 <button id="close-popup" class="btn mt-4 bg-gray-200 rounded-md hover:bg-gray-300">Close confirmation</button>
             </div>
         </div>
+        </div>
     </div>
-
     </main>
+    <!-- history start -->
+    <div id="history-section" class="hidden">
+        <h2 class="text-3xl text-center">Donation History</h2>
+        <div id="history-container" class="space-y-3 text-center mt-5 text-xl"></div>
+    </div>    
+    <!-- history End -->
+
     <script src="js/noakhali-donate.js"></script>
     <script src="js/feni-donate.js"></script>
     <script src="js/quota-donate.js"></script>
+    <script src="js/features.js"></script> 
     
 </body>
 </html>
