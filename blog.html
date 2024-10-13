@@ -12,10 +12,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
     <style>
-        .font-lexend{
-            font-family: "Lexend", sans-serif;
-        }
-    </style>
+      .font-lexend{
+          font-family: "Lexend", sans-serif;
+      }
+      .active {
+          background-color: #b4f461;
+      }
+      .active:hover {
+          background-color: #b4f880;
+      }
+  </style>
 
 <script>
     tailwind.config = {
@@ -33,34 +39,33 @@
 
 </head>
 <body class="font-lexend">
-    <header class="bg-slate-200 p-4 fixed w-full top-0 z-10" style="backdrop-filter: blur(10px); background-color: rgba(241, 237, 237, 0.7);">
-        <nav class="lg:ml-20 lg:mr-20">
-            <div class="navbar mt-5">
-                <div class="navbar-start">
-                    <a class="btn lg:w-32 bg-bt-primary lg:text-xl text-base" href="index.html">Home</a>
-                </div>
-                <div class="navbar-center">
-                    <img class="size-10" src="assets/logo.png" alt="" srcset="">
-                  <a class="ml-4 font-bold text-xl hidden lg:block">Donate Bangladesh</a>
-                </div>
-                <div class="navbar-end">
-                  <button class="btn btn-ghost btn-circle">
-                    <img src="assets/coin.png" alt="" srcset="">
-                  </button>
-                  <p class="text-xl lg:font-medium">5500</p> <p class="ml-2 text-xl lg:font-bold font-medium">BDT</p>
-                </div>
+  <div class="sticky top-0 z-10 glass pb-5">
+    <header class="bg-[#FDD83520] py-2">
+        <nav class="w-11/12 mx-auto py-2 flex justify-between items-center">
+            <div>
+                <a href="index.html">
+                    <button class="btn bg-[#B4F461] hover:bg-[#B4F880] px-8">Home</button>
+                </a>
+            </div>
+            <div class="logo flex gap-2 items-center">
+                <img class="size-10" src="assets/logo.png" alt="">
+                <h2 class=" font-bold text-xl hidden md:block">Donate Bangladesh</h2>
+            </div>
+            <div class="flex gap-2 items-center">
+                <img src="assets/coin.png" alt="">
+                <h2 class="text-lg font-semibold"><span id="balance">5500</span> BDT</h2>
               </div>
         </nav>
-
-        <div class="text-center mt-10">
-            <button class="btn bg-bt-primary lg:text-xl text-base">Donation</button>
-            <button class="btn lg:text-xl text-base">History</button>
-        </div>
     </header>
-    <main class="mt-56 lg:ml-20 lg:mr-20">
+    <nav class="flex justify-center gap-10 pt-10 sticky">
+        <button id="show-donation-btn" class="btn active lg:text-lg text-base px-8">Donation</button>
+        <button id="show-history-btn" class="btn lg:text-lg text-base px-8">History</button>
+    </nav>
+</div>
+    <main class="w-11/12 mx-auto justify-items-center mt-10 mb-10">
         <!-- Creativety FAQ Section -->
 
-    <section class="my-24 bg-slate-50">
+    <section class="mt-10 bg-slate-50">
         <h3 class="text-5xl font-bold mb-12 pt-10 lg:pl-10 pl-5">
           Important <span class="text-bike-primary">FAQ</span>
         </h3>
@@ -134,5 +139,7 @@
       </section>
   
     </main>
+
+    <script src="js/donate.js"></script>
 </body>
 </html>
